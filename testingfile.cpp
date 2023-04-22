@@ -246,9 +246,10 @@ void run(int *health, int *currentlevel, int boss, int level){
 
         if(flag==0){
             flag++;
+            cout <<"(1)              (2)              (3)"
             cout <<"Current layer is "<<*currentlevel<<" out of "<<level<<"layers"<<endl;
             cout <<"Your health need to be larger than (the boss):"<<boss<<endl;
-            cout << "Choose the enemy you want to attack 1, 2, or 3"<<endl;
+            cout << "Choose the enemy you want to attack 1, 2, or 3 (please input \"1\", \"2\", \"3\")"<<endl;
             cin >> input;
             switch(input){
                 case 1:
