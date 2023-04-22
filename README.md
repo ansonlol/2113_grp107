@@ -36,17 +36,16 @@ Features:
 The program encompass the following coding elements:
 
 1. Generation of random game sets or events:
-- The monsters in the map are randomly generated in any position.
-- The exit in the map are randomly generated in a fixed range of position.
-- The attack power of the hero and the monster are in a ranom range.
-- The items retrieved after fighting the monster are randomly generated.
-
+- The 3 enemies on each layers are randomly generated 
+- The damages or healing (the mathematical symbol and integer) of enemies are randomly generated
+- The strength of boss for each levels is generated randomly according to the damages or healing in the layers in the level
 
 2. Data structures for storing game status:
-- Integer(Health points, magic level, attack power)
-- Vector (list of items that the hero currently has)
-- String (item type, descreption etc.), 
-- 3 structs (item, position, status) tracking item information, position in the map as well as hero/monster status respectively.
+- Integer (yourheath, level, totalachievement)
+- Double (time)
+- Vector (list that contain the achievements of the player)
+- String (accountName,  etc.) 
+- structs (enemy) storing the mathematic symbol and the integer ranging from 1-9
 
 3. Dynamic memory management:
 - At the beginning of the game, the vector recording the items the hero has is empty. In the game whenever the hero gets an item, it will be pushed into the vector. Whenever the hero used an item during a fight, the vector will pop the item out. 
@@ -54,14 +53,17 @@ The program encompass the following coding elements:
 - In the walking mode, the size of the vector is returned to show how many items that the hero currently has.
 
 4. File input/output:
-- 
+- input "littleguy.txt" for printing the enemies of each layers
+- input and output "enemy.txt" for the random data of 3 enemies of each layers
+- input "num.txt" for printing "level" and integer 0-9 in ASCII art way
+- input and output "accountinfo.txt" for the login of current players and sign in of new player
+- input and output "ranking (level)" to record the players' accountname, time to finish the level and the achievement has reached for the level, and show the ranking of the level
+- input and output "(accountname)" to save the player's data for resuming the game
 
 5. Program codes in multiple files:
 The program is saved in multiple files. The main cpp files are:
 - main.cpp: controls main logic of the game
-- preGame.cpp: covers assisting game set-ups such as intialization, saving&loading functions etc.
-- inGame.cpp: mainly concerning the walking mode and the fighting mode of the game.
-Besides mentioned above, there are many .txt files for UI and file I/O used, as well as Makefile and ultiple header files.
+- achievement.cpp: record and check whether the conditions of achievement are met
 
 
 -------------------------
