@@ -394,6 +394,7 @@ void ranking(int level, string accname, double besttime, int totalachievement){
     int No = 1;
     for (const auto& e : match) {
         oufile << setw(3) << setfill('0') << No <<";"<< e.second.first << ";" << e.first << ";" << e.second.second << "\n";
+        No++;
     }
     oufile.close();
 }
