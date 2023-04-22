@@ -30,7 +30,6 @@ At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Fina
 
 You can choose to save and quit the game in each level.
 
-
 -------------------------
 Features:
 
@@ -49,9 +48,8 @@ The program encompass the following coding elements:
 - structs (enemy) storing the mathematic symbol and the integer ranging from 1-9
 
 3. Dynamic memory management:
-- At the beginning of the game, the vector recording the items the hero has is empty. In the game whenever the hero gets an item, it will be pushed into the vector. Whenever the hero used an item during a fight, the vector will pop the item out. 
-- The vector has certain size limit to prevent the hero storing too many items. 
-- In the walking mode, the size of the vector is returned to show how many items that the hero currently has.
+- In the getaccuratepath function, we use 2 dynmaic array to store the array of mathemattical symbol and damges.
+- After writing the array into the files, the array will be deleted.
 
 4. File input/output:
 - input "littleguy.txt" for printing the enemies of each layers
@@ -64,7 +62,7 @@ The program encompass the following coding elements:
 5. Program codes in multiple files:
 The program is saved in multiple files. The main cpp files are:
 - main.cpp: controls main logic of the game
-- achievement.cpp: record and check whether the conditions of achievement are met (with header file)
+- achievement.cpp: record and check whether the conditions of achievement are met
 
 
 -------------------------
@@ -72,13 +70,11 @@ C/C++ libraries:
 All the libraries used are mentioned in class, listed as follows:
 #include <iostream>
 #include <fstream>: manipulation of files (hero status saving and loading)
-#include<sstream>: separate string to store
 #include <string>: string manipulation
 #include <iomanip>: setw(), setfill(), etc. (UI design)
 #include <vector>: vector manipulation (dynamic array management)
-#include<map>: maping time with its accountname and achievement number
 #include <cstdlib>: rand(), srand() for generating randomness 
-#include <chrono>: measure the time of game: chrono::high_resolution_clock::now(), chrono::duration<double>
+#include <ctime>: time(0) to set random seed
 
 
 -------------------------
