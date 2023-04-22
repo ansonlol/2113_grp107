@@ -39,7 +39,7 @@ void sameasboss(int health, int boss){
 
 //(4)win consequently 10 level
 void win10(int winLv){
-    if(winLv==10*(data0[4]+3)){
+    if(winLv==10*(data0[4]+1)+2){
         cout<<"Get \"CLEAR "<< 10*(data0[4]+1) <<" LEVELS\""<<endl;
         data0[4]+=1;
     }
