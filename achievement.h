@@ -3,9 +3,13 @@
 
 #include<iostream>
 #include <cstdlib> // for rand() and srand()
-#include <ctime>   // for time()
+#include <chrono>   // for time()
 #include<string>
 #include<fstream>
+#include<sstream>
+#include<vector>
+#include<map>
+#include <iomanip>
 
 using namespace std;
 struct enemy{
