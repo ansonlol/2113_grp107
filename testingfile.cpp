@@ -13,7 +13,6 @@ using namespace std;
 
 /*
 v6
-hello
 1) for level 1, a total of 3 layers
 2) create a accurate path with lenght 3, with the final value larger than 1(the boss value)
 3) create a random list of unrelated enemies 
