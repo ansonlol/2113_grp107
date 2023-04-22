@@ -14,9 +14,12 @@ UID: 3036063747
 
 
 -------------------------
-Background settings
+Game Background Setting:
+You are the prince of a once-prosperous kingdom, but it is now under attack by a powerful enemy force. As your people suffer and your kingdom falls into chaos, you find yourself trapped at the bottom of a towering fortress. The only way to save your people is to fight your way through each floor of the fortress, defeating the enemies that stand in your way and gaining strength along the way.
 
-Description:  In this game, you will encounter different enemies in different layers.
+Each floor presents new challenges and enemies, from simple foot soldiers to powerful bosses. As you defeat each foe, you will gain experience and power, allowing you to grow stronger and more capable. But the road ahead is long and perilous, and the fate of your kingdom hangs in the balance.
+
+Can you rise to the challenge and overcome the enemy forces? Only by defeating the final boss at the top of the tower can you hope to rescue your people and restore your kingdom to its former glory.
 
 How to play? 
 The game has a total of 10 levels. 
