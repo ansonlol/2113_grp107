@@ -53,9 +53,8 @@ The program encompass the following coding elements:
 - The vector has certain size limit to prevent the hero storing too many items. 
 - In the walking mode, the size of the vector is returned to show how many items that the hero currently has.
 
-4. File input/output (e.g., for loading/saving game status):
-- In the walking mode, the hero can choosed to quit at any time. The entire game will thus be saved into several files tracking the hero status, map information etc.
-- At the beginning of the game, the user can choose to load the very recent game, or to start a new game.
+4. File input/output:
+- 
 
 5. Program codes in multiple files:
 The program is saved in multiple files. The main cpp files are:
