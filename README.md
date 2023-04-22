@@ -30,6 +30,7 @@ At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Fina
 
 You can choose to save and quit the game in each level.
 
+
 -------------------------
 Features:
 
@@ -63,7 +64,7 @@ The program encompass the following coding elements:
 5. Program codes in multiple files:
 The program is saved in multiple files. The main cpp files are:
 - main.cpp: controls main logic of the game
-- achievement.cpp: record and check whether the conditions of achievement are met
+- achievement.cpp: record and check whether the conditions of achievement are met (with header file)
 
 
 -------------------------
@@ -71,11 +72,13 @@ C/C++ libraries:
 All the libraries used are mentioned in class, listed as follows:
 #include <iostream>
 #include <fstream>: manipulation of files (hero status saving and loading)
+#include<sstream>: separate string to store
 #include <string>: string manipulation
 #include <iomanip>: setw(), setfill(), etc. (UI design)
 #include <vector>: vector manipulation (dynamic array management)
+#include<map>: maping time with its accountname and achievement number
 #include <cstdlib>: rand(), srand() for generating randomness 
-#include <ctime>: time(0) to set random seed
+#include <chrono>: measure the time of game: chrono::high_resolution_clock::now(), chrono::duration<double>
 
 
 -------------------------
