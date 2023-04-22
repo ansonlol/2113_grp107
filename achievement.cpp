@@ -1,9 +1,12 @@
 #include<iostream>
 #include <cstdlib> // for rand() and srand()
-#include <ctime>   // for time()
+#include <chrono>   // for time()
 #include<string>
-#include<vector>
 #include<fstream>
+#include<sstream>
+#include<vector>
+#include<map>
+#include <iomanip>
 #include "achievement.h"
 
 vector<int> data0;
