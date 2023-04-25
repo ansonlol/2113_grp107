@@ -1,7 +1,7 @@
 # COMP2113_GP107
 
 -------------------------
-NAME: text-based ////// story-telling game with the context of adventure
+NAME: Tower of Valor (Text-based Game)
 
 -------------------------
 Group members:
@@ -72,16 +72,16 @@ The program is saved in multiple files. The main cpp files are:
 C/C++ libraries:
 All the libraries used are mentioned in class, listed as follows:
 #include <iostream>
-#include <fstream>: manipulation of files (hero status saving and loading)
+#include <fstream>: manipulation of files (users' accounts storage)
 #include <string>: string manipulation
-#include <iomanip>: setw(), setfill(), etc. (UI design)
-#include <vector>: vector manipulation (dynamic array management)
-#include <cstdlib>: rand(), srand() for generating randomness 
+#include <iomanip>: setw(), setfill()
+#include <vector>: 
+#include <cstdlib>: rand(), srand()
 #include <ctime>: time(0) to set random seed
 
 
 -------------------------
 Compilation and execution instructions:
-Step 1: Aftering cloning the URL, simply 'make main' in the terminal and execute the main to start the game. 
-Step 2: Follow the game instructions and enjoy the game!
+- Type 'make main' in the terminal
+- Read the instructions and enjoy our game
 
