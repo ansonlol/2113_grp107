@@ -1,7 +1,10 @@
 # COMP2113_GP107
 
 -------------------------
-NAME: Tower of Valor (Text-based Game)
+NAME: Tower of Valor 
+TYPE: Text-based Game 
+Targeting Audience: Kindergarten and Primary school students
+AIM: Provide a leisure and interesting platform for students to practise basic mathematics
 
 -------------------------
 Group members:
