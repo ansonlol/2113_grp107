@@ -421,6 +421,7 @@ int main(){
     string accname, line, input, data;
     char normal[4]={'/','-','+', '*'};
     vector<int> acdata;
+    cout << endl << "WELCOME TO Tower of Valor" << endl << endl;
     //login part
     accname = login();
     ifstream infile(accname);
@@ -451,7 +452,7 @@ int main(){
     acdata[0]++;
     inputdata(acdata);
 
-    cout << "Press any key to start fighting !!!"<<endl;
+    cout << "Press any key to start fighting and revenging!!!"<<endl;
         cin >> input;
         cout <<"-----------------------------------------------------------------------------------"<<endl;
 
@@ -460,7 +461,7 @@ int main(){
     while(level<13){
         prtcharacter("level");
         prtcharacter(to_string(level-2));
-        cout << "Welcome to the battle, beat the boss to survive !!!"<<endl;
+        cout << "Welcome to the battle, beat the boss to rescue your country !!!"<<endl;
         cout << "Are you ready ?? (press 'p' to pause and save the game / press 's' to show the ranking and save the game / press any others to start)"<<endl;
         
         cin >> input;
@@ -483,7 +484,7 @@ int main(){
         enemy* correctenemylist[13];
 
         int boss = getaccuratepath(level, correctenemylist, normal)-1;
-        cout<<"You need to beat the boss with "<<boss <<" health !!!"<<endl;
+        cout<<"You need to beat the boss with "<<boss <<" health in the final round !!!"<<endl;
         prtcharacter("boss");
         cout <<"-----------------------------------------------------------------------------------"<<endl;
 
@@ -511,7 +512,7 @@ int main(){
         
         auto end = chrono::high_resolution_clock::now();
         if(yourheath > boss){
-            cout << "finish level " << level-2 << endl ;
+            cout << "Excellence !! finish level " << level-2 << endl ;
             chrono::duration<double> elapsed = end - start;
             if(elapsed.count()<besttime){
                 besttime = elapsed.count()/(level-3);
@@ -531,6 +532,16 @@ int main(){
         
         level++;
         yourheath=1;
+    }
+    if(level == 13){
+        cout << "Congrats my warrior! You have finished all levels! The enemy is defeated and your country is saved forever!"<<endl;
+        int k;
+        cout << "Input 1 if you want to save the progress, Input 2 if you want to restart the game: ";
+        cin >> k;
+        if(k==2){
+            level = 3;
+            paused = 1;
+        }
     }
     if(pasued){
         
