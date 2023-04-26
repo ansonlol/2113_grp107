@@ -539,7 +539,7 @@ int main(){
         cin >> k;
         if(k==2){
             level = 3;
-            paused = 1;
+            pasued = 1;
         }
     }
     if(pasued){
