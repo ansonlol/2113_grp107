@@ -36,6 +36,19 @@ At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Fina
 
 You can choose to save and quit the game in each level.
 
+After finish each level, your time taken to complete the level will be recorded and compared to other users
+You display the ranking in each level
+
+Meanwhile, we have 7 extra challenges/achievements prepared for you
+1)REAL FANS: login the game for the second time
+2)STRONGGGG: your health is double, triple or larger than the boss
+3)TIE: your health is same as the boss
+4)CLEAR: win consequently 10 levels
+5)FAST: finish the level within 5 seconds
+6)UNCHANGE: the health is same as the previous level you achieved
+7)LUCKY: your health is same as the level and you win
+
+
 -------------------------
 Features:
 
@@ -86,5 +99,6 @@ All the libraries used are mentioned in class, listed as follows:
 -------------------------
 Compilation and execution instructions:
 - Type 'make main' in the terminal
-- Read the instructions and enjoy our game
+- Type ./main
+- Enjoy the game 
 
