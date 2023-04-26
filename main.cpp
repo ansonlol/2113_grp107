@@ -12,27 +12,11 @@
 using namespace std;
 
 /*
-v6
-1) for level 1, a total of 3 layers
-2) create a accurate path with lenght 3, with the final value larger than 1(the boss value)
-3) create a random list of unrelated enemies 
-4) for each layer, 1 is from the accurate path, and other two is random
-5) user type 1,2,3 to choose the path, 
-    if the symbol is '/' it gets the floor of the quotient
-6) print the current health of user
-7) if the final health is less than the boss -> gg else, win move on to next level
-
-
-remark
-maybe make a story setting
-create a name for the game;
+consider a mathematical symbol (+, -, *, /), and a number
+the current health will be changed due to different calculation
+reutrn the health after calculation
 */
 
-
-
-
-// adding your current health to the enemy's
-// return the health after attack
 int addingyourhealth(char sym, int num, int current){
         switch (sym){
             case '+':
@@ -149,6 +133,11 @@ void initialization(enemy** enemy, int level, char normal[4]){
     outfile.close();
     outf.close();
 }
+/*
+read the characters in littleguy.txt
+display randomly the character in random order
+use dynamic array to store the data which will be deleted
+*/
 void prtseparatecharacter() {
     string ar[3];
     string line;
@@ -191,7 +180,7 @@ void prtseparatecharacter() {
 }
 
 // print the board obtain from the enemy.txt, 
-// display the all the levels
+
 void prtbrd(){
 
     ifstream infile("enemy.txt");
@@ -210,6 +199,8 @@ void prtbrd(){
     }
     infile.close();
 }
+
+// display the all the levels with special characters
 void prtcharacter(string character){
 
     ifstream infile("num.txt");
@@ -285,7 +276,13 @@ void run(int *health, int *currentlevel, int boss, int level){
     rename("temp.txt", "enemy.txt");
     
 }
-
+/*
+users can login with their accoutns respectively
+if the user is a new user, a new account will be created with the password stored
+if the user is not a new user, then their levels and achievements will be retrieved based on the last update
+the accountinfo.txt is used for serialization 
+return the account name 
+*/
 string login(){
     int input;
     string accname, pw;
@@ -367,6 +364,11 @@ string login(){
     return accname;
 }
 
+/*
+in different levels we will create a ranking leader board
+for each user, their time taken and achievements accomplished in the level will be recorded
+then compare to the time taken by other users, a learderboard will be displayed
+*/
 void ranking(int level, string accname, double besttime, int totalachievement){
     string filee = "ranking " + to_string(level);
     ifstream infile(filee);
@@ -398,6 +400,9 @@ void ranking(int level, string accname, double besttime, int totalachievement){
     oufile.close();
 }
 
+/*
+display the leaderboard 
+*/
 void prtrank(int level){
     string filee = "ranking " + to_string(level);
     ifstream ifile(filee);
@@ -411,8 +416,11 @@ void prtrank(int level){
         cout << "Ranking of the level"<<level<< " does not exist" << endl;
     }
 }
-
-
+/*
+the entire program will start with this main funciton
+it initialize most of the variables and display the basic info and game settings
+serialization part will be performed in the last section where the user choose to pause the game
+*/
 int main(){
 
     int yourheath=1, pasued=0, level=3, phealth = 0,lasttotal=0;
