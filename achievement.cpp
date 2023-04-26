@@ -11,6 +11,7 @@
 
 vector<int> data0;
 
+// input the required data to a vector variable
 void inputdata(vector<int> d){
     data0 = d;
     data0.assign(d.begin(), d.end());
@@ -75,7 +76,7 @@ void lucky(int health,int level){
 
 //(8)
 
-//checking achievement
+//checking achievements acomplished by the users
 void check(int health, int phealth, int boss, int level, double time){
     doublesame(health, phealth);
     toostrong(health, boss);
@@ -85,10 +86,13 @@ void check(int health, int phealth, int boss, int level, double time){
     lucky(health,level);
 }
 
+
 vector<int> record(){
     return data0;
 }
 
+// return the total achievements acomplished by the user
+// use in the rank function
 int totalachievement(){
     int total=0;
     for(int i = 1 ; i<data0.size() ; i++){
