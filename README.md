@@ -31,6 +31,7 @@ In each level, you will face 3 enemies, with each of them representing a differe
 You have to choose which enemy to attack and get the strength after calculation. 
 Finally, passing all layers will come across a boss with a certain health, only if you strength is higher than the boss can you beat it. 
 If you successfully kill the boss, then you will pass to next level, otherwise, stuck in the same level and replay.
+It is guaguaranteed that there exist at least one path that result in a health larger than the boss.
 
 At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Finally, you will face a final boss in each level. 
 
