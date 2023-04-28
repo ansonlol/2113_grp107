@@ -493,7 +493,7 @@ int main(){
 
     infile.close();
     
-    while(level<13){
+    while(level<12){
         prtcharacter("level");
         prtcharacter(to_string(level-2));
         cout << "Welcome to the battle, beat the boss to rescue your country !!!"<<endl;
@@ -569,7 +569,7 @@ int main(){
         level++;
         yourheath=1;
     }
-    if(level == 13){
+    if(level == 12){
         cout << "Congrats my warrior! You have finished all levels! The enemy is defeated and your country is saved forever!"<<endl;
         prtcharacter("end");
         int k;
