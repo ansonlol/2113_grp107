@@ -12,8 +12,11 @@ NAME: Chu Tsun Hang
 UID: 3036063747
 
 NAME: Tower of Valor 
+
 TYPE: Text-based Game 
+
 Targeting Audience: Kindergarten and Primary school students
+
 AIM: Provide a leisure and interesting platform for students to practise basic mathematics
 
 -------------------------
