@@ -133,51 +133,6 @@ void initialization(enemy** enemy, int level, char normal[4]){
     outfile.close();
     outf.close();
 }
-/*
-read the characters in littleguy.txt
-display randomly the character in random order
-use dynamic array to store the data which will be deleted
-*/
-void prtseparatecharacter() {
-    string ar[3];
-    string line;
-    int flag = 0, i = 0, j = 0;
-    for (int a = 0; a < 3; a++) {
-        ar[a] = to_string(rand() % 3 + 1);
-    }
-    string** arr = new string*[3];
-    for (int i = 0; i < 3; i++) {
-        arr[i] = new string[12];
-        for (int j = 0; j < 12; j++) {
-            arr[i][j] = "";
-        }
-    }
-    while (i < 3) {
-        ifstream infile("littleguy.txt");
-        while (getline(infile, line)) {
-            if (flag == 0 && line == ar[i]) {
-                flag++;
-            } else if (flag == 1 && line == ar[i]) {
-                i++;
-                j = 0;
-                flag = 0;
-                infile.close();
-                break;
-            } else if (flag == 1 && j < 12) {
-                arr[i][j] = line;
-                j++;
-            }
-        }
-        infile.close();
-    }
-    for (int k = 0; k < 12; k++) {
-        for (int l = 0; l < 3; l++) {
-            cout << arr[l][k];
-        }
-        cout << endl;
-    }
-    delete[] arr;
-}
 
 // print the board obtain from the enemy.txt, 
 
@@ -200,6 +155,77 @@ void prtbrd(){
     infile.close();
 }
 
+
+
+// trim from end (right)
+inline string& rtrim(string& s)
+{
+    const char* t = "\t\n\r\f\v";
+    s.erase(s.find_last_not_of(t) + 1);
+    return s;
+}
+
+// trim from beginning (left)
+inline string& ltrim(string& s)
+{
+    const char* t = "\t\n\r\f\v";
+    s.erase(0, s.find_first_not_of(t));
+    return s;
+}
+
+// trim from both ends (left & right)
+inline string& trim(string& s)
+{
+    const char* t = "\t\n\r\f\v";
+    return ltrim(rtrim(s));
+}
+/*
+read the characters in littleguy.txt
+display randomly the character in random order
+use dynamic array to store the data which will be deleted
+*/
+void prtseparatecharacter() {
+    string ar[3];
+    string line;
+    int flag = 0, i = 0, j = 0;
+    for (int a = 0; a < 3; a++) {
+        ar[a] = to_string(rand() % 3 + 1);
+    }
+    string** arr = new string*[3];
+    for (int i = 0; i < 3; i++) {
+        arr[i] = new string[12];
+        for (int j = 0; j < 12; j++) {
+            arr[i][j] = "";
+        }
+    }
+    while (i < 3) {
+        ifstream infile("littleguy.txt");
+        while (getline(infile, line)) {
+            string cha = trim(line);
+            if (flag == 0 && cha == ar[i]) {
+                flag++;
+            } else if (flag == 1 && cha == ar[i]) {
+                i++;
+                j = 0;
+                flag = 0;
+                infile.close();
+                break;
+            } else if (flag == 1 && j < 12) {
+                arr[i][j] = line;
+                j++;
+            }
+        }
+        infile.close();
+    }
+    for (int k = 0; k < 12; k++) {
+        for (int l = 0; l < 3; l++) {
+            cout << arr[l][k];
+        }
+        cout << endl;
+    }
+    delete[] arr;
+}
+
 // display the all the levels with special characters
 void prtcharacter(string character){
 
@@ -207,9 +233,10 @@ void prtcharacter(string character){
     string line;
     int flag=0;
     while(getline(infile, line)){
-        if(flag==0 && line==character)
+        string cha = trim(line);
+        if(flag==0 && cha==character)
             flag++;
-        else if(flag==1 && line==character)
+        else if(flag==1 && cha==character)
             break;
         else if(flag==1)
             cout << line <<endl;
