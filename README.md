@@ -28,12 +28,19 @@ Each floor presents new challenges and enemies, from simple foot soldiers to pow
 Can you rise to the challenge and overcome the enemy forces? Only by defeating the final boss at the top of the tower can you hope to rescue your people and restore your kingdom to its former glory.
 
 How to play? 
-The game has a total of 10 levels. 
+
+The game has a total of 9 levels. 
+
 Your strength will be initialized at 1.
+
 In each level, you will face 3 enemies, with each of them representing a different damages or healing. For example, -3 ,  +5 ,  /6  for each enemies respectively. 
+
 You have to choose which enemy to attack and get the strength after calculation. 
+
 Finally, passing all layers will come across a boss with a certain health, only if you strength is higher than the boss can you beat it. 
+
 If you successfully kill the boss, then you will pass to next level, otherwise, stuck in the same level and replay.
+
 It is guaguaranteed that there exist at least one path that result in a health larger than the boss.
 
 At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Finally, you will face a final boss in each level. 
@@ -41,17 +48,24 @@ At level 1, you need to complete 3 layers, 4 layers for level 2, and so on. Fina
 You can choose to save and quit the game in each level.
 
 After finish each level, your time taken to complete the level will be recorded and compared to other users
-You display the ranking in each level
+
+You can display the ranking in each level
 
 Meanwhile, we have 7 extra challenges/achievements prepared for you
-1)REAL FANS: login the game for the second time
-2)STRONGGGG: your health is double, triple or larger than the boss
-3)TIE: your health is same as the boss
-4)CLEAR: win consequently 10 levels
-5)FAST: finish the level within 5 seconds
-6)UNCHANGE: the health is same as the previous level you achieved
-7)LUCKY: your health is same as the level and you win
 
+1)REAL FANS: login the game for the second time
+
+2)STRONGGGG: your health is double, triple or larger than the boss
+
+3)TIE: your health is same as the boss
+
+4)CLEAR: win consequently 10 levels
+
+5)FAST: finish the level within 5 seconds
+
+6)UNCHANGE: the health is same as the previous level you achieved
+
+7)LUCKY: your health is same as the level and you win
 
 -------------------------
 Features:
