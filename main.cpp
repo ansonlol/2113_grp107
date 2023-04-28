@@ -455,7 +455,8 @@ int main(){
     string accname, line, input, data;
     char normal[4]={'/','-','+', '*'};
     vector<int> acdata;
-    cout << endl << "WELCOME TO Tower of Valor" << endl << endl;
+    cout << endl << "WELCOME TO Tower of Valor"<<endl<<endl;
+    prtcharacter("t");
     //login part
     accname = login();
     ifstream infile(accname);
@@ -560,7 +561,8 @@ int main(){
         }
         else{
             sameasboss(yourheath,boss);
-            cout << "GGGGG try again !!"<<endl <<endl;
+            cout << "GGGGG try again !!"<<endl;
+            prtcharacter("GG");
             level--;
         }
         
@@ -569,6 +571,7 @@ int main(){
     }
     if(level == 13){
         cout << "Congrats my warrior! You have finished all levels! The enemy is defeated and your country is saved forever!"<<endl;
+        prtcharacter("end");
         int k;
         cout << "Input 1 if you want to save the progress, Input 2 if you want to restart the game: ";
         cin >> k;
