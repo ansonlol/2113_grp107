@@ -398,7 +398,7 @@ then compare to the time taken by other users, a learderboard will be displayed
 */
 void ranking(int level, string accname, double besttime, int totalachievement){
     string filee = "ranking " + to_string(level);
-    ifstream infile(filee);
+    ifstream infile(filee.c_str());
     string line;
     string str[4];
     map<double,pair<string,string>> match;
@@ -416,7 +416,7 @@ void ranking(int level, string accname, double besttime, int totalachievement){
         }
         infile.close();
     }
-    ofstream oufile(filee);
+    ofstream oufile(filee.c_str());
     oufile << "Ranking ; AccountName ; Time ; Achievement\n";
     match[besttime] = {accname,to_string(totalachievement)};
     int No = 1;
@@ -432,7 +432,7 @@ display the leaderboard
 */
 void prtrank(int level){
     string filee = "ranking " + to_string(level);
-    ifstream ifile(filee);
+    ifstream ifile(filee.c_str());
     string line;
     if(ifile.is_open()){
         while(getline(ifile,line)){
@@ -459,7 +459,7 @@ int main(){
     prtcharacter("t");
     //login part
     accname = login();
-    ifstream infile(accname);
+    ifstream infile(accname.c_str());
     if(infile.is_open()){
         getline(infile, line);
         int pos = line.find(" ");
@@ -582,7 +582,7 @@ int main(){
     }
     if(pasued){
         
-        ofstream oufile(accname);
+        ofstream oufile(accname.c_str());
         
         oufile << "Level: " << level <<endl;
         //oufile << loginNo << endl;
